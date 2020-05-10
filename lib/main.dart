@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:device_apps/device_apps.dart';
 import 'home.dart';
+import 'appList.dart';
+import 'welcome/welcomeSlide.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,7 +17,9 @@ class MyAppState extends State<MyApp> {
       initialRoute: '/',
       theme: ThemeData(fontFamily: 'QuickSand'),
       routes: {
-        '/': (context) => Home(),
+        '/': (context) => Welcome(),
+        '/home': (context) => Home(),
+        '/appList': (context) => AppList(),
       },
     );
   }
